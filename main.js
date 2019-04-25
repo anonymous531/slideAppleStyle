@@ -5,7 +5,7 @@ var timer = setInterval(function(){
     $(images).css({
         transform:'translateX('+ n%4* -920 +'px)'
     })
-    allLis.eq(n).addClass('active').siblings('.active').removeClass('active')
+    allLis.eq(n%4).addClass('active').siblings('.active').removeClass('active')
     n++
 },2000)
 for(let i=0;i<allLis.length;i++){
@@ -27,7 +27,7 @@ $('#window').on('mouseleave',function(){
         $(images).css({
             transform:'translateX('+ n%4* -920 +'px)'
         })
-        allLis.eq(n).addClass('active').siblings('.active').removeClass('active')
+        allLis.eq(n%4).addClass('active').siblings('.active').removeClass('active')
         n++
     },2000)
 })
